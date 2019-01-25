@@ -1,11 +1,16 @@
 import * as React from 'react';
 import './App.css';
-import TodoList from './react-version';
-class App extends React.Component<any> {
+
+
+
+class App extends React.Component {
   public render() {
     return (
-      <TodoList />
+      <div className="App">
+        123
+      </div>
     );
   }
 }
+
 export default App;

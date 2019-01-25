@@ -1,21 +1,11 @@
 {
-  "extends": [
-    "tslint:recommended",
-    "tslint-react",
-    "tslint-config-prettier"
-  ],
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "rules": {
     "no-var-requires": false,
     "jsx-no-lambda": false,
-    "sort-vars": false,
+    "object-literal-sort-keys": false,
     "ember-ordering": false,
-    "no-console": false,
-    "ordered-imports": [
-      false
-    ],
-    "object-literal-sort-keys": [
-      false
-    ]
+    "no-console": false
   },
   "linterOptions": {
     "exclude": [
@@ -24,4 +14,4 @@
       "coverage/lcov-report/*.js"
     ]
   }
-}
+} 
