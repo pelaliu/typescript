@@ -1,18 +1,23 @@
-import * as React from 'react'
+import * as React from 'react';
+import ClassNames from 'classnames';
 
-const Link = ({ active, children, onClick }: {active: boolean, children: React.ReactNode, onClick: any}) => {
-  if (active) {
-    return <span>{children}</span>
-  }
-
-  return (
-    <button onClick={e => {
+interface IProps {
+  active: boolean;
+  onClick: any;
+  children: any;
+}
+class Link extends React.Component {
+  public readonly props: IProps;
+  public render() {
+    return (
+      <button className={ClassNames('submit', this.props.active && 'choose')} onClick={e => {
         e.preventDefault();
-        onClick();
+        this.props.onClick();
       }}>
-      {children}
-    </button>
-  )
+        {this.props.children}
+      </button>
+    )
+  }
 }
 
-export default Link
+export default Link;

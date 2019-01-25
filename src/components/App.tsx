@@ -3,12 +3,13 @@ import Footer from './Footer';
 import AddTodo from '../containers/AddTodo'
 import VisibleTodoList from '../containers/VisibleTodoList'
 
-const App = () => (
-  <div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
-  </div>
-)
-
+class App extends React.Component {
+  public render() {
+    return <div>
+      <AddTodo />
+      <Footer />
+      <VisibleTodoList />
+    </div>
+  }
+}
 export default App

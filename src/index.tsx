@@ -1,4 +1,4 @@
-// react-version
+// <--react-version ------------------------------------------------>
 
 // import * as React from 'react';
 // import * as ReactDOM from 'react-dom';
@@ -12,7 +12,7 @@
 // );
 // registerServiceWorker();
 
-// redux-version
+// <--redux-version ------------------------------------------------>
 
 import * as React from 'react';
 import { render } from 'react-dom';
@@ -20,7 +20,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import todoApp from './reducers';
 import App from './components/App';
-
+import './index.css';
 const store = createStore(todoApp);
 
 render(

@@ -1,5 +1,28 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.submit {
+    width: 100px;
+    height: 30px;
+    background: aliceblue;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.choose {
+    background-color: #a0e6e6;
+    border: 1px solid #75bfdc;
 }
