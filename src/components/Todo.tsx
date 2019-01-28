@@ -1,6 +1,6 @@
 import * as React from 'react'
 interface IProps {
-  onClick: any;
+  onClick?: (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => void;
   completed: boolean;
   text: string;
 }

@@ -1,22 +1,24 @@
-const todos = (state = [], action: any) => {
-    switch (action.type) {
-      case 'ADD_TODO':
-        return [
-          ...state,
-          {
-            id: action.id,
-            text: action.text,
-            completed: false
-          }
-        ]
-      case 'TOGGLE_TODO':
-        return state.map((todo: any) =>
-          (todo.id === action.id) 
-            ? {...todo, completed: !todo.completed}
-            : todo
-        )
-      default:
-        return state
-    }
+interface ITodos {
+  id: number;
+  completed: boolean;
+  text: string;
+  type: string;
+}
+const todos = (state: ITodos[], action: ITodos) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return [
+        ...state,
+        {
+          id: action.id,
+          text: action.text,
+          completed: false
+        }
+      ]
+    case 'TOGGLE_TODO':
+      return state.map(todo => (todo.id === action.id) ? { ...todo, completed: !todo.completed } : todo )
+    default:
+      return state
   }
-  export default todos;
+}
+export default todos;

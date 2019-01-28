@@ -1,9 +1,13 @@
 import * as React from 'react'
 import Todo from './Todo'
-
+interface ITodos {
+  id: number;
+  completed: boolean;
+  text: string;
+}
 interface IProps {
-  todos: any;
-  onTodoClick: any;
+  todos: ITodos[];
+  onTodoClick: (id: number, event: React.MouseEvent<HTMLLIElement, MouseEvent>) => void;
 }
 class TodoList extends React.Component {
   public props: IProps;
@@ -11,8 +15,8 @@ class TodoList extends React.Component {
     const { todos, onTodoClick } = this.props;
     return (
       <ul>
-        {todos.map((todo: any) => (
-          <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
+        {todos.map(todo => (
+          <Todo key={todo.id} {...todo} onClick={() => onTodoClick.bind(this, todo.id)} />
         ))}
       </ul>
     )

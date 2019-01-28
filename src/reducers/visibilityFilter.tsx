@@ -1,4 +1,8 @@
-const visibilityFilter = (state = 'SHOW_ALL', action: any) => {
+interface IAction {
+  type: string;
+  filter: string;
+}
+const visibilityFilter = (state = 'SHOW_ALL', action: IAction) => {
     switch (action.type) {
       case 'SET_VISIBILITY_FILTER':
         return action.filter
